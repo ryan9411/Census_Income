@@ -1,0 +1,63 @@
+Explanatory Data Analysis
+
+0. Prep work
+- import library
+- load data
+
+1. Understand the data
+- read description of dataset
+- head(),info(),describe()
+- sns.displot(df,kde=True)
+
+2. Clean data
+
+- missing values
+ ~ isnull().sum()
+ ~ if meaningful: keep Nan
+ ~ SimpleImputer(strategy='most_frequent') for cat-features
+ ~ SimpleImputer(strategy='median') for num-features
+ ~ drop the rest rows with missing values 
+ ~ drop.na(axis=0,inplace=True)
+
+- outliers
+ ~ boxplot/scatterplot
+ ~ normally distributed: z-score
+ ~ non-normally distributed: iqr
+
+3. Create new features from existing data
+
+4. Remove unused features
+
+5. Perform scaling and transformations
+
+6. Plotting and analysis
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+Regression Model
+
+0. Prep work
+- import library
+- load data
+
+
+1. Understand the data
+- read description of dataset
+- head(),info(),describe()
+- sns.displot(df,kde=True)
+- select features highly correlated to target
+ ~ sns.heatmap(df.corr(),annot=True)
+ ~ check multicollinearity
+
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+Classification Model
+
+*. Imbalanced dataset
+- undersampling
+- oversampling
+ ~ SMOTE
+
+
+
